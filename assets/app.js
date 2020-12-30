@@ -41,7 +41,7 @@ function initWeather() {
 function storeCityArray() {
     localStorage.setItem("cities", JSON.stringify(List));
 }
-// This function saves the current display city to local storage
+// This function saves the currently display city to local storage
 function storeCurrentCity() {
     localStorage.setItem("currentCity", JSON.stringify(cityname));
 }
@@ -63,7 +63,7 @@ $("#citySearchBtn").on("click", function (event) {
     displayWeather();
     displayFiveDayForecast();
 });
-// displays the current city and weather
+// displays the current city and
 async function displayWeather() {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=50215f6d7dbe82a6fa5993e31980175e"
     var response = await $.ajax({
